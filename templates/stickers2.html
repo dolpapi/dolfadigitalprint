@@ -1,0 +1,65 @@
+  
+{% extends "layout2.html" %}
+
+{% block content %}
+
+<h2 id="home"> Stickers</h2>
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+.img{
+display: none;
+}
+</style>
+
+<!-- TYPES OF STICKERS -->
+
+<body>
+
+<div>
+<button type="button" class="btn btn-dark"onclick="Stickers()">Glossy</button>
+
+<button type="button" class="btn btn-dark"onclick="Stickers()">Matte</button>
+
+<button type="button" class="btn btn-light"onclick="img()">Clear</button>
+
+<button type="button" class="btn btn-info"onclick="img()">Frosted</button>
+
+<button type="button" class="btn btn-dark"onclick="img()">Reflective</button>
+
+<button type="button" class="btn btn-dark"onclick="img()">Photoluminiscence</button>
+</div>
+
+
+
+
+<div id="myDIV"> <!-- IMAGES -->
+<img src="/static/cutouts.jpg"  id="Glossy" class="img" width="300px">
+<img src="/static/panaflex.jpg" id="Matte" width="300px">
+</div>
+
+
+<script>
+  
+  function Stickers() {
+  var g = document.getElementById("Glossy")
+  var m = document.getElementById("Matte")
+  var x = document.getElementById("myDIV");
+  if (g.style.display === "block") {
+    g.style.display = "none";
+  } else {
+    g.style.display = "block";
+    m.style.display = "none";
+  }
+}
+
+
+</script>
+</body>
+{% endblock content %}

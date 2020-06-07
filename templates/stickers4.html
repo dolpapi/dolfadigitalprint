@@ -1,0 +1,66 @@
+
+{% extends "layout2.html" %}
+
+{% block content %}
+
+<h2 id="home"> Stickers</h2>
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+}
+
+
+
+.stickercontainer{
+
+  text-align: center;
+  background-color: black;
+}
+
+
+
+
+</style>
+
+<!-- TYPES OF STICKERS -->
+
+<body>
+<div class="sticker">
+<button type="button" class="btn btn-dark" 
+onclick="document.getElementById('myImage').src='/static/pic4.jpg'">Glossy</button>
+
+<button type="button" class="btn btn-dark"
+onclick="document.getElementById('myImage').src='/static/pic7.jpg'">Matte</button>
+
+<button type="button" class="btn btn-light"
+onclick="img()">Clear</button>
+
+<button type="button" class="btn btn-info"
+onclick="img()">Frosted</button>
+
+<button type="button" class="btn btn-dark"
+onclick="img()">Reflective</button>
+
+<button type="button" class="btn btn-dark"
+onclick="img()">Photoluminiscence</button>
+</div>
+
+
+
+<div class="stickercontainer">
+<img id="myImage" src="/static/cutouts.jpg" width="30%">
+
+</div>
+
+<script>
+  
+
+
+
+</script>
+</body>
+{% endblock content %}
